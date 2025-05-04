@@ -1,0 +1,21 @@
+<h1>🛒 あなたのカート</h1>
+
+<% if @items.empty? %>
+  <p>カートに商品はありません。</p>
+<% else %>
+  <ul>
+    <% total = 0 %>
+    <% @items.each do |item| %>
+      <li>
+        <%= item.name %> - <%= number_to_currency(item.price, unit: "¥") %>
+        <%= button_to '削除', remove_from_cart_path(item), method: :post %>
+      </li>
+      <% total += item.price * session[:cart][item.id.to_s] %>
+    <% end %>
+  </ul>
+
+  <p><strong>合計金額:</strong> <%= number_to_currency(total, unit: "¥") %></p>
+
+  <%= button_to 'カートを空にする', clear_cart_path, method: :post %>
+  <%= link_to '🎉 購入ごっこする', cart_complete_path %>
+<% end %>

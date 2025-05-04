@@ -1,16 +1,34 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ShopPlay</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ShopPlay 🛍</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload" %>
   </head>
 
   <body>
-    <%= yield %>
+    <!-- 🌟 ヘッダー -->
+    <header style="background-color: #f8f9fa; padding: 1rem; border-bottom: 1px solid #ccc;">
+      <h1 style="margin: 0;">
+        <%= link_to "🛍 ShopPlay", root_path, style: "text-decoration: none; color: #333;" %>
+      </h1>
+      <nav>
+        <%= link_to "商品一覧", root_path, style: "margin-right: 1rem;" %>
+        <%= link_to "カートを見る", cart_path %>
+      </nav>
+    </header>
+
+    <!-- 🌟 メインコンテンツ -->
+    <main style="padding: 2rem;">
+      <%= yield %>
+    </main>
+
+    <!-- 🌟 フッター -->
+    <footer style="background-color: #f8f9fa; padding: 1rem; border-top: 1px solid #ccc; text-align: center; font-size: 0.9rem;">
+      &copy; <%= Time.now.year %> ShopPlay - これはごっこアプリです。実際には何も買えません。
+    </footer>
   </body>
 </html>

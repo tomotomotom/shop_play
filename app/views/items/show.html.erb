@@ -1,2 +1,12 @@
-<h1>Items#show</h1>
-<p>Find me in app/views/items/show.html.erb</p>
+<h1><%= @item.name %></h1>
+
+<% if @item.image.attached? %>
+  <%= image_tag @item.image.variant(resize_to_limit: [400, 400]) %><br>
+<% end %>
+
+<p><strong>価格:</strong> <%= number_to_currency(@item.price, unit: "¥") %></p>
+<p><%= @item.description %></p>
+
+<%= button_to '🛒 カートに入れる', add_to_cart_path(@item), method: :post %>
+
+<%= link_to '← 戻る', items_path %>
