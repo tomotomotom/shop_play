@@ -1,14 +1,10 @@
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
-Item.create!(
-  name: "空飛ぶ靴",
-  price: 999999,
-  description: "これを履けば、毎朝空から出勤できる！（※気分的に）"
-)
+Item.create!(name: "スマイル製造機 Ver.2.9", price: 842495, description: "買っても意味はありませんが、楽しいです。")
+Item.create!(name: "未来日記ノート Ver.1.0", price: 29756, description: "これはもはや現実逃避の域です。")
+Item.create!(name: "無重力枕 Ver.3.1", price: 588918, description: "節約派でも買ってしまう（買わないけど）。")
+Item.create!(name: "無限コーヒーカップ Ver.9.3", price: 223349, description: "節約派でも買ってしまう（買わないけど）。")
+Item.create!(name: "未来新聞 Ver.10.2", price: 305737, description: "あくまでごっこです、本当に買えません。")
+Item.create!(name: "バーチャル動物園キット Ver.7.7", price: 706491, description: "存在しないと思っていたあの商品が、ついに登場！")
+Item.create!(name: "瞬間英語脳チップ Ver.8.2", price: 431213, description: "一度使えば、元の生活には戻れません。")
+Item.create!(name: "自動おにぎり製造機 Ver.5.3", price: 488015, description: "誰にもバレずに満足できる逸品。")
+Item.create!(name: "感情翻訳メガネ Ver.9.6", price: 857168, description: "まるで魔法のような体験をあなたに。")
+Item.create!(name: "無重力枕 Ver.7.5", price: 569346, description: "あくまでごっこです、本当に買えません。")

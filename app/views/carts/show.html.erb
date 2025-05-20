@@ -15,7 +15,9 @@
   </ul>
 
   <p><strong>合計金額:</strong> <%= number_to_currency(total, unit: "¥") %></p>
-
-  <%= button_to 'カートを空にする', clear_cart_path, method: :post %>
+  <p><%= link_to '← 商品一覧に戻る', root_path, class: 'btn' %></p>
+  <%= button_to 'カートを空にする', clear_cart_path,class: 'btn', method: :post %>
   <%= link_to '🎉 購入ごっこする', cart_complete_path %>
+
+
 <% end %>

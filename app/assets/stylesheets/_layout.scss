@@ -1,0 +1,45 @@
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+
+  &:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    background-color: #2471a3;
+    transform: translateY(0);
+  }
+
+  &:focus {
+    outline: 2px solid #85c1e9;
+    outline-offset: 2px;
+  }
+}
+
+.btn--secondary {
+  background-color: #6c757d;
+
+  &:hover {
+    background-color: #5a6268;
+  }
+}
+
+.btn--danger {
+  background-color: #e74c3c;
+
+  &:hover {
+    background-color: #c0392b;
+  }
+}

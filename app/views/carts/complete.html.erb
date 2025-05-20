@@ -1,3 +1,7 @@
 <h1>🎊 ごっこ遊び終了！</h1>
-<p>あなたの爆買い額は<strong>無料</strong>でした！💸</p>
-<%= link_to '← 戻る', root_path %>
+
+<p>あなたの爆買い額は <strong><%= number_to_currency(@total, unit: "¥") %></strong> でした！</p>
+
+<p>でも実際には1円も使っていません💸 ごっこ遊び、またしてね！</p>
+
+<%= link_to '← トップページへ戻る', root_path %>

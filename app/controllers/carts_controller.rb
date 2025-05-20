@@ -25,9 +25,12 @@ class CartsController < ApplicationController
     redirect_to cart_path, notice: "カートを空にしました。"
   end
 
-  def complete
-    session[:cart] = {}
-  end
+def complete
+  @items = Item.find(session[:cart].keys)
+  @total = @items.sum { |item| item.price * session[:cart][item.id.to_s] }
+  session[:cart] = {}  # カートは空にしておく
+end
+
 
   private
 
